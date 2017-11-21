@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp">
+
+    <Button
+        android:id="@+id/fetch_address_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fetch_address"
+        android:onClick="fetchAddressButtonHandler"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_send_data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/location_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginTop="20dp"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_address_view"
+        android:id="@+id/textInputLayout"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/et_cargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Roba" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text_saputnik_layout"
+        android:layout_below="@+id/textInputLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/et_fellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Saputnik" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_send_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="sendDataButtonHandler"
+        android:background="@color/colorPrimary"
+        android:text="Send Data"
+        android:textColor="@android:color/white" />
+
+
+
+</LinearLayout>
